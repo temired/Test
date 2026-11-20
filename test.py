@@ -14,24 +14,6 @@ void setup() {
   pinMode(LED_GELB, OUTPUT);
   pinMode(LED_GRUEN, OUTPUT);
 }
-
-// Platzhalter: liefert spaeter den echten Wert vom MH-Z19B (UART)
-int leseCO2() {
-  return 850;
-}
-
-void zeigeAmpel(int co2) {
-  digitalWrite(LED_ROT, LOW);
-  digitalWrite(LED_GELB, LOW);
-  digitalWrite(LED_GRUEN, LOW);
-
-  if (co2 < GRENZE_GELB) {
-    digitalWrite(LED_GRUEN, HIGH);
-  } else if (co2 <= GRENZE_ROT) {
-    digitalWrite(LED_GELB, HIGH);
-  } else {
-    digitalWrite(LED_ROT, HIGH);
-  }
 }
 
 void loop() {
